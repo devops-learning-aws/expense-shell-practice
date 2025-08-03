@@ -1,7 +1,7 @@
 #!/bin/bash
 
 USERID=$(id -u)
-TIMESTAMP=$(data +%F-%H-%M-%S)
+TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRPT_NAME=$(echo $0 | cut -d "." -f1)
 LOGFILE=/tmp/$SCRPT_NAME-$TIMESTAMP.log
 R="\e[31m"
