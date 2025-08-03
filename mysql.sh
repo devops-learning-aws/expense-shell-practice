@@ -39,7 +39,7 @@ VALIDATE $? "enabling mysql"
 systemctl start mysqld $>>$LOGFILE
 VALIDATE $? "starting mysql"
 
-mysql -h db.daws78s.online -uroot -p${mysql_root_password} -e 'show databases;' &>>$LOGFILE
+mysql -h 172.31.90.18 -uroot -p${mysql_root_password} -e 'show databases;' &>>$LOGFILE
 if [ $? -ne 0 ] 
 then 
     mysql_secure_installation --set-root-pass ${mysql_root_password} &>>$LOGFILE
